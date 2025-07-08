@@ -1,15 +1,33 @@
-<script language="JavaScript">
-  
-const frutas = [
-"Manzana", "Frewsa"
-];
+<script>
+        // 1. Define tu lista de textos
+        const textos = [
+            "La creatividad es la inteligencia divirtiéndose.",
+            "El conocimiento habla, pero la sabiduría escucha."
+        ];
 
-// Genera un índice aleatorio basado en la longitud del array
-const indiceAleatorio = Math.floor(Math.random() * frutas.length);
+        // 2. Obtén referencias a los elementos HTML
+        const textoMostrado = document.getElementById('textoMostrado');
+        const botonGenerar = document.getElementById('botonGenerar');
 
-// Obtiene el elemento en el índice aleatorio
-const frutaAleatoria = frutas[indiceAleatorio];
+        // 3. Función para seleccionar un texto aleatorio
+        function seleccionarTextoAleatorio() {
+            // Genera un índice aleatorio basado en la longitud del array 'textos'
+            const indiceAleatorio = Math.floor(Math.random() * textos.length);
+            // Retorna el texto en ese índice
+            return textos[indiceAleatorio];
+        }
 
-console.log(frutaAleatoria);
+        // 4. Función para mostrar el texto aleatorio
+        function mostrarNuevoTexto() {
+            const textoAleatorio = seleccionarTextoAleatorio();
+            textoMostrado.textContent = textoAleatorio;
+        }
 
-</script>
+        // 5. Agrega un "event listener" al botón
+        // Cuando el botón sea clickeado, se ejecutará la función 'mostrarNuevoTexto'
+        botonGenerar.addEventListener('click', mostrarNuevoTexto);
+
+        // Opcional: Muestra un texto aleatorio al cargar la página por primera vez
+        mostrarNuevoTexto();
+
+    </script>
