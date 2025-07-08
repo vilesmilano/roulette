@@ -1,28 +1,10 @@
 <h1>Hello World</h1>
 
-const textList = ["Hello", "World", "JavaScript", "Random", "Text"];
+let messages = ["Hi", "Hey", "Hello", "Please make some attempts", "holla"];
+ // We can use inbuilt Math object to perform mathematical operations.
+ // to get a random number between 0 and the total size of messages array, we can use it as follows. 
+ // Math.floor will return the largest integer which is less than or equal to that random number.
+    let message = messages[Math.floor(Math.random()*messages.length)];
 
-function getRandomText() {
-  const randomIndex = Math.floor(Math.random() * textList.length);
-  const randomText = textList[randomIndex];
-  return randomText;
-}
-
-console.log(getRandomText()); // Outputs a random string from textList
-
-<script language="JavaScript">
-<!--
-var r_text = new Array ();
-r_text[0] = "All the leaves are brown";
-r_text[1] = "And the sky is grey";
-r_text[2] = "I've been for a walk";
-r_text[3] = "On a winter's day";
-r_text[4] = "I'd be safe and warm";
-r_text[5] = "If I was in L.A.";
-r_text[6] = "California dreaming, On such a winter's day";
-var i = Math.floor(7*Math.random())
-
-document.write(r_text[i]);
-
-//-->
-</script>
+// to select your input element and set default value, you can do
+$('input').val(message);
