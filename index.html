@@ -1,10 +1,24 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Random Text Example</title>
+</head>
+<body>
+    <h1>Random Text Generator</h1>
+    <p id="randomText"></p>
 
-let messages = ["Hi", "Hey", "Hello", "Please make some attempts", "holla"];
- // We can use inbuilt Math object to perform mathematical operations.
- // to get a random number between 0 and the total size of messages array, we can use it as follows. 
- // Math.floor will return the largest integer which is less than or equal to that random number.
-    let message = messages[Math.floor(Math.random()*messages.length)];
+    <script>
+        const texts = [
+            "Welcome to our website!",
+            "Check out our latest updates.",
+            "Enjoy browsing through our content.",
+            "We have a variety of topics for you!"
+        ];
 
-// to select your input element and set default value, you can do
-$('input').val(message);
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        document.getElementById('randomText').innerText = texts[randomIndex];
+    </script>
+</body>
+</html>
