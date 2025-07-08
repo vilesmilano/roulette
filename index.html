@@ -1,33 +1,12 @@
 <script>
-        // 1. Define tu lista de textos
-        const textos = [
-            "La creatividad es la inteligencia divirtiéndose.",
-            "El conocimiento habla, pero la sabiduría escucha."
-        ];
+let textArray = [
+    'test1',
+    'test3'
+];
 
-        // 2. Obtén referencias a los elementos HTML
-        const textoMostrado = document.getElementById('textoMostrado');
-        const botonGenerar = document.getElementById('botonGenerar');
+let randomNumber = Math.floor(Math.random()*textArray.length);
 
-        // 3. Función para seleccionar un texto aleatorio
-        function seleccionarTextoAleatorio() {
-            // Genera un índice aleatorio basado en la longitud del array 'textos'
-            const indiceAleatorio = Math.floor(Math.random() * textos.length);
-            // Retorna el texto en ese índice
-            return textos[indiceAleatorio];
-        }
+BTTActions.pasteString(textArray[randomNumber]);
 
-        // 4. Función para mostrar el texto aleatorio
-        function mostrarNuevoTexto() {
-            const textoAleatorio = seleccionarTextoAleatorio();
-            textoMostrado.textContent = textoAleatorio;
-        }
-
-        // 5. Agrega un "event listener" al botón
-        // Cuando el botón sea clickeado, se ejecutará la función 'mostrarNuevoTexto'
-        botonGenerar.addEventListener('click', mostrarNuevoTexto);
-
-        // Opcional: Muestra un texto aleatorio al cargar la página por primera vez
-        mostrarNuevoTexto();
-
+returnToBTT('');
     </script>
