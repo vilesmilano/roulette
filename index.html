@@ -1,1 +1,11 @@
 <h1>Hello World</h1>
+
+const textList = ["Hello", "World", "JavaScript", "Random", "Text"];
+
+function getRandomText() {
+  const randomIndex = Math.floor(Math.random() * textList.length);
+  const randomText = textList[randomIndex];
+  return randomText;
+}
+
+console.log(getRandomText()); // Outputs a random string from textList
