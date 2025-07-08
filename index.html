@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Random Text Example</title>
-</head>
-<body>
-    <h1>Random Text Generator2</h1>
-    <p id="randomText"></p>
-
     <script>
         const texts = [
             "Welcome to our website!",
@@ -20,5 +9,3 @@
         const randomIndex = Math.floor(Math.random() * texts.length);
         document.getElementById('randomText').innerText = texts[randomIndex];
     </script>
-</body>
-</html>
